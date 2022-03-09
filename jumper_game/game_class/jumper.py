@@ -3,7 +3,6 @@
 class Jumper:
 
     def __init__(self):
-        self.is_alive = True
         self.parachute = [" ___", "/___\\", "\\   /", " \\ /"]
         self.live_jumper = """  0
  /|\\
@@ -19,8 +18,8 @@ class Jumper:
 """ 
 
 
-    def return_jumper(self):
-        if self.is_alive:
+    def return_jumper(self, is_alive):
+        if is_alive:
             return self.parachute, self.live_jumper
         else:
             return self.parachute, self.dead_jumper
@@ -28,5 +27,3 @@ class Jumper:
 
     def remove_line(self):
         self.parachute.pop(0)
-        if len(self.parachute) == 0:
-            self.is_alive = False
