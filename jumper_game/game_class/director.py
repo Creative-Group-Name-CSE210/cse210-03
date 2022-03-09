@@ -1,23 +1,33 @@
 # director Class 
 # imports 
+from game_class.word import Word
+from game_class.terminal_service import TerminalService
+from game_class.jumper import Jumper
+
+class Director:
+
+    def __init__(self):
+        self.is_playing = True
+        self.word = Word()
+        self.jumper = Jumper()
+        self.terminal = TerminalService()
 
 
-#class director:
+    def game_loop(self):
+        self.do_outputs()
+        while self.is_playing:
+            self.get_input()
+            self.do_updates()
+            self.do_outputs()
+    
 
-    #def __init__(self):
- 
+    def get_input(self):
+        pass
+    
 
-    #def start_game(self):
+    def do_updates(self):
+        pass
+    
 
-       # while self._is_playing:
-            #self._get_inputs()
-
-            #self._do_updates()
-            #check_letter()
-                #self.playing = True:
-                    #add_correct_letter()
-                #self.playing = False:
-                    #remove_line
-
-            #self._do_outputs()
-                #print_jumper()
+    def do_outputs(self):
+        pass
