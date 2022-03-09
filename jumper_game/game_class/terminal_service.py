@@ -12,7 +12,5 @@ class TerminalService:
         letter = input('Guess a letter [a-z]: ')
         return letter
 
-    def print_break(Self):
-        print('^^^^^^^')
 
 
