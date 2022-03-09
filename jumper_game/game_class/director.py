@@ -11,6 +11,7 @@ class Director:
         self.word = Word()
         self.jumper = Jumper()
         self.terminal = TerminalService()
+        self.guess_letter = ''
 
 
     def game_loop(self):
@@ -26,7 +27,10 @@ class Director:
     
 
     def do_updates(self):
-        pass
+        if self.word.check_letter(self.guess_letter) == True:
+            self.word.add_correct_letter(self.guess_letter)
+        else: 
+            self.jumper.remove_line()
     
 
     def do_outputs(self):
