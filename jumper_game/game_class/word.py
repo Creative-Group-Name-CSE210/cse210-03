@@ -28,9 +28,3 @@ class Word:
             if old_letter == new_letter:
                 return True
         return False
-
-
-# word = Word()
-# print(word.chosen_word_list, word.guessed_word_list)
-# word.add_correct_letter("t")
-# print(word.chosen_word_list, word.guessed_word_list)
