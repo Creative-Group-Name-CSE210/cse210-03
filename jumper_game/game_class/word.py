@@ -5,7 +5,7 @@ import random
 class Word:
 
     def __init__(self):
-        self._list_of_words = ["letter"]
+        self._list_of_words = ["letter", "word", "manley", "idaho", "classes", "nerd", "python", "sleep"]
         self.chosen_word = self._list_of_words[random.randint(0, len(self._list_of_words) - 1)]
         self.chosen_word_list = []
         self.guessed_word_list = []
