@@ -16,7 +16,7 @@ class Director:
 
     def game_loop(self):
         self.do_outputs()
-        while self.jumper.is_alive:
+        while self.jumper.is_alive == True and self.word.check_completion(self.word.guessed_word_list) == False:
             self.get_input()
             self.do_updates()
             self.do_outputs()

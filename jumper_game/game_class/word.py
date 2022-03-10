@@ -28,3 +28,10 @@ class Word:
             if old_letter == new_letter:
                 return True
         return False
+
+    def check_completion(self, word_list):
+        for letter in word_list:
+            if letter == '-':
+                return True
+            else:
+                return False
