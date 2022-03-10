@@ -16,7 +16,7 @@ class Director:
 
     def game_loop(self):
         self.do_outputs()
-        while self.is_playing:
+        while self.is_alive:
             self.get_input()
             self.do_updates()
             self.do_outputs()
