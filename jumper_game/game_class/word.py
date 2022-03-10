@@ -30,7 +30,11 @@ class Word:
         return False
 
     def check_completion(self):
+        counter = 0
         for letter in self.guessed_word_list:
-            if letter != '-':
-                return False
-        return True
+            if letter != '_':
+                counter += 1
+        if counter == len(self.guessed_word_list):
+            return True
+        else:
+            return False
