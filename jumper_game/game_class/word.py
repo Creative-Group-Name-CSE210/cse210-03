@@ -29,9 +29,8 @@ class Word:
                 return True
         return False
 
-    def check_completion(self, word_list):
-        for letter in word_list:
-            if letter == '-':
-                return True
-            else:
+    def check_completion(self):
+        for letter in self.guessed_word_list:
+            if letter != '-':
                 return False
+        return True
