@@ -1,8 +1,8 @@
 # director Class 
 # imports 
-from word import Word
-from terminal_service import TerminalService
-from jumper import Jumper
+from game_class.word import Word
+from game_class.terminal_service import TerminalService
+from game_class.jumper import Jumper
 
 class Director:
 
@@ -38,6 +38,3 @@ class Director:
         self.terminal.display_jumper(parachute, jumper)
 
 
-
-director = Director()
-director.game_loop()
