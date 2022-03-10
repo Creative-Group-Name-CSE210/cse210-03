@@ -32,6 +32,6 @@ class Director:
         else: 
             self.jumper.remove_line()
     
-
     def do_outputs(self):
-        pass
+        print(Word)
+        print(Jumper)
